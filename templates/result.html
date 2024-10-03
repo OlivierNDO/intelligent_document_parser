@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parsed Output</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Styling for the logo and title */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            width: 60px; /* Adjust the logo size here */
+            margin-right: 15px; /* Spacing between logo and title */
+        }
+
+        .title {
+            font-size: 32px; /* Increase the font size here for a larger title */
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        /* Additional styling for aesthetics */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+        }
+
+        /* Adjusting the table for better aesthetics */
+        table {
+            width: 100%; /* Make the table take up 100% of the container width */
+            margin-top: 20px;
+            border-collapse: collapse; /* Remove gaps between borders */
+            table-layout: auto; /* Allow columns to auto-size based on content */
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+            text-align: left;
+            width: 40%; /* Adjust this value if needed */
+        }
+
+        td {
+            width: 60%; /* Adjust this value if needed */
+        }
+
+        /* Button styling */
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .text-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin-bottom: 20px;
+            white-space: pre-wrap; /* Preserve newlines and spaces */
+        }
+
+        /* Make Filename font size the same as Extracted Data */
+        .filename-header, .data-header {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo and Title -->
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+            <span class="title">Intelligent Document Parser</span>
+        </div>
+
+        <h1>Parsed Document Details</h1>
+
+        <!-- Display the uploaded filename -->
+        <p class="filename-header">Filename: {{ filename }}</p>
+
+        <!-- Display the extracted raw text in a box -->
+        {% if extracted_text %}
+        <h2>Extracted Text</h2>
+        <div class="text-box">
+            {{ extracted_text }}
+        </div>
+        {% endif %}
+
+        <!-- Display parsed text details if available -->
+        {% if output_record %}
+        <h2 class="data-header">Extracted Data</h2>
+        <table>
+            <tr><th>Arrest Made</th><td>{{ output_record.arrest_made }}</td></tr>
+            <tr><th>Injury Reported</th><td>{{ output_record.injury_reported }}</td></tr>
+            <tr><th>Three or More Vehicles</th><td>{{ output_record.three_or_more_vehicles }}</td></tr>
+            <tr><th>Police Report Filed</th><td>{{ output_record.police_report_filed }}</td></tr>
+            <tr><th>Ticket Given</th><td>{{ output_record.ticket_given }}</td></tr>
+        </table>
+        {% endif %}
+
+        <!-- Add a Back button -->
+        <form action="{{ url_for('index') }}" method="GET">
+            <button type="submit">Back to Upload</button>
+        </form>
+    </div>
+</body>
+</html>
