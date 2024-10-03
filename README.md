@@ -1,4 +1,5 @@
-## <img src="static/images/logo.png" alt="Project Logo" width="80" height="80"> Intelligent Document Parser
+<img src="static/images/logo.png" alt="Project Logo" width="80" height="80" style="vertical-align: middle; margin-right: 10px;"> <span style="font-size: 32px; font-weight: bold;">Intelligent Document Parser</span>
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
