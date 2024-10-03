@@ -7,6 +7,12 @@
 
 The **Intelligent Document Parser** is a Flask application that allows users to upload files (PDF, JPEG, PNG, TXT) and leverages AI techniques to extract meaningful data from them. The system supports OCR (Optical Character Recognition) for image files, and it parses files to provide structured information in a user-friendly table format. The project uses [NLP Cloud](https://nlpcloud.com/) to access large language models.
 
+Given an uploaded document, the app answers specific questions using the content of the file.
+
+![Parsed Output Example](static/images/parsing_example.png)
+
+
+
 
 ## Features
 
@@ -100,16 +106,6 @@ pip install -r requirements.txt
 1. **Upload a File**: On the homepage, you can upload files in `.jpg`, `.jpeg`, `.png`, `.pdf`, or `.txt` format.
 2. **View Extracted Text**: After the file is uploaded, the raw extracted text will be displayed along with the parsed data in a table format.
 3. **Navigate Back**: Use the "Back to Upload" button to upload another file.
-
-## Example
-
-This is what the upload page looks like:
-![Parsed Output Example](static/images/upload_page.png)
-
-
-Here is an example of how the result page looks after uploading and parsing a document:
-
-![Parsed Output Example](static/images/parsing_example.png)
 
 
 ## Contact

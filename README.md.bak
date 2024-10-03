@@ -1,13 +1,11 @@
-
 # Intelligent Document Parser
 
 ![Logo](static/images/logo.png)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 
 The **Intelligent Document Parser** is a Flask application that allows users to upload files (PDF, JPEG, PNG, TXT) and leverages AI techniques to extract meaningful data from them. The system supports OCR (Optical Character Recognition) for image files, and it parses files to provide structured information in a user-friendly table format. The project uses [NLP Cloud](https://nlpcloud.com/) to access large language models.
-
-
 
 
 ## Features
@@ -42,6 +40,7 @@ llm_document_parsing/
 │
 ├── README.md             # Project documentation (this file)
 └── requirements.txt      # List of dependencies for the project
+└── .env                  # Credential storage file
 ```
 
 ## Requirements
@@ -112,17 +111,6 @@ Here is an example of how the result page looks after uploading and parsing a do
 
 ![Parsed Output Example](static/images/parsing_example.png)
 
-## Contributing
-
-Contributions are welcome! Feel free to submit a pull request or open an issue to report bugs or suggest improvements.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
-
-If you have any questions, feel free to contact the project maintainer:
-
-- **Name**: OlivierNDO
-- **Email**: olivierndo@example.com
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/oliviernicholas/)
