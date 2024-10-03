@@ -1,6 +1,4 @@
-# Intelligent Document Parser
-
-![Logo](static/images/logo.png)
+## <img src="static/images/logo.png" alt="Project Logo" width="80" height="80"> Intelligent Document Parser
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
