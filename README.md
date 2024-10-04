@@ -49,12 +49,7 @@ llm_document_parsing/
 ```
 
 ## Requirements
-
-- Python 3.x
-- Flask
-- Pillow (for image handling)
-- Tesseract-OCR (for OCR support)
-- Pandas
+- Python 3.8
 
 You can install all the required Python dependencies by running:
 
@@ -68,8 +63,8 @@ pip install -r requirements.txt
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/OlivierNDO/llm_document_parsing.git
-   cd llm_document_parsing
+   git clone https://github.com/OlivierNDO/intelligent_document_parser.git
+   cd intelligent_document_parser
    ```
 
 2. **Install Dependencies**:
